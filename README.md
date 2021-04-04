@@ -19,3 +19,9 @@ To run the entire project:
 ```
 npm start
 ```
+
+To run the tests:
+
+```
+npm test
+```
