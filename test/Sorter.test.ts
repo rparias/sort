@@ -1,5 +1,6 @@
 import { CharactersCollection } from '../src/CharactersCollection';
 import { NumbersCollection } from '../src/NumbersCollection';
+import { LinkedList } from '../src/LinkedList';
 import { Sorter } from '../src/Sorter';
 
 describe('Sorting tests', () => {
@@ -19,5 +20,18 @@ describe('Sorting tests', () => {
     sorter.sort();
 
     expect(charactersCollection.data).toStrictEqual('aBdrXz');
+  });
+
+  it('Sort a linked list of numbers in ascedent order', () => {
+    const linkedList = new LinkedList();
+    linkedList.add(-4);
+    linkedList.add(6);
+    linkedList.add(1);
+    linkedList.add(9);
+    const sorter = new Sorter(linkedList);
+
+    sorter.sort();
+
+    expect(linkedList.print()).toStrictEqual('-4,1,6,9');
   });
 });
