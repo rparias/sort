@@ -1,3 +1,4 @@
+import { CharactersCollection } from '../src/CharactersCollection';
 import { NumbersCollection } from '../src/NumbersCollection';
 import { Sorter } from '../src/Sorter';
 
@@ -9,5 +10,14 @@ describe('Sorting tests', () => {
     sorter.sort();
 
     expect(numbersCollection.data).toStrictEqual([-4, 0, 2, 10]);
+  });
+
+  it('Sort a string in ascedent order', () => {
+    const charactersCollection = new CharactersCollection('zrXadB');
+    const sorter = new Sorter(charactersCollection);
+
+    sorter.sort();
+
+    expect(charactersCollection.data).toStrictEqual('aBdrXz');
   });
 });
