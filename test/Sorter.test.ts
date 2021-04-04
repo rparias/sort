@@ -8,6 +8,6 @@ describe('Sorting tests', () => {
 
     sorter.sort();
 
-    expect(sorter.collection.data).toStrictEqual([-4, 0, 2, 10]);
+    expect(numbersCollection.data).toStrictEqual([-4, 0, 2, 10]);
   });
 });
