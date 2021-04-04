@@ -1,7 +1,7 @@
 export class Sorter {
   constructor(public collection: number[]) {}
 
-  sort(): number[] {
+  sort(): void {
     const { length } = this.collection;
 
     for (let i = 0; i < length; i++) {
@@ -13,7 +13,5 @@ export class Sorter {
         }
       }
     }
-
-    return this.collection;
   }
 }
